@@ -12,13 +12,9 @@ let Login = class extends Component{
       )
   }
   render() {
-console.log(this.props)
       return (
-
         <div>
-
             <input type="button" onClick={this.startApp.bind(this)}value="login"/>
-
         </div>
       )
     }

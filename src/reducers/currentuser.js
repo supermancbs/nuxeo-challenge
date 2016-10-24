@@ -5,7 +5,9 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
   switch(action.type) {
 
     case 'LOG_IN':
+  debugger
       return Object.assign({}, state, {
+
       	currentUser: action.payload
       })
     default:
