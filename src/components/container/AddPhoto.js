@@ -11,11 +11,8 @@ let AddFolder = class extends Component{
   }
   render(){
     return (
-
-
           <input type="text" placeholder="add folder"/>
           <input type="button" value="New Folder"/>
-
     )
   }
 
