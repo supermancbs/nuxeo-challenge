@@ -8,6 +8,7 @@
   "dependencies": {
     "nuxeo": "^2.1.0",
     "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
     "react-dropzone": "^3.7.0",
     "react-redux": "^4.4.5",

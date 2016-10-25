@@ -6,7 +6,7 @@ const Folder = ({content}) => {
   return (
     <div>
       {content.title}
-      <Dropzone/>
+      {/* <Dropzone/> */}
     </div>
   )
 }

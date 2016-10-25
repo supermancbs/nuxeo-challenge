@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import addFolder from '../../actions/addFolder'
 import retrieveUser from '../../actions/addFolder'
-import { bindActionCreators } from 'redux'
+
 
 
 let AddFolder = class extends Component{
@@ -10,8 +10,9 @@ let AddFolder = class extends Component{
     e.preventDefault()
     let name = e.target.children[0].value
     e.target.children[0].value = ""
-    this.props.addFolder(name).then(() => this.props.retrieveUser())
+    this.props.dispatch(addFolder(name)).then(this.props.dispatch(retrieveUser()))
   }
+
   render(){
     return (
       <div>
@@ -26,8 +27,5 @@ let AddFolder = class extends Component{
 
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addFolder, retrieveUser }, dispatch)
-}
 
-export default connect(null, mapDispatchToProps)(AddFolder)
+export default connect()(AddFolder)

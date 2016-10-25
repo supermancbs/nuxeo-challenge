@@ -2,18 +2,18 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import Login from './Login'
 import Document from '../presentational/Document'
-import Folder from '../presentational/Folder'
+import Folder from './Folder'
 import Picture from '../presentational/Picture'
 import AddFolder from './AddFolder'
+import { Grid } from 'react-bootstrap'
 
 let HomePage = class extends Component{
-
 
   render() {
     if (this.props.currentUser.currentUser.entries){
       let documents = this.props.currentUser.currentUser.entries.map((entry) => {
         if (entry.type === "Workspace"){
-          return <Folder content={entry}/>
+          return <Grid><Folder content={entry}/></Grid>
         }
         else if (entry.type === "Picture") {
           return <Picture content={entry}/>

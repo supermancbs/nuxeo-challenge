@@ -9,9 +9,11 @@ var DropzoneDemo = React.createClass({
     },
 
     onDrop: function (acceptedFiles) {
+      
       this.setState({
         files: acceptedFiles
       });
+      this.props.handlePhoto(acceptedFiles)
     },
 
     onOpenClick: function () {
@@ -29,7 +31,7 @@ var DropzoneDemo = React.createClass({
                 </button>
                 {this.state.files.length > 0 ? <div>
                 <h2>Uploading {this.state.files.length} files...</h2>
-                <div>{this.state.files.map((file) => <img src={file.preview} /> )}</div>
+                <div>{this.state.files.map((file) => <img src={file.preview} role="presentation"/> )}</div>
                 </div> : null}
             </div>
         );
